@@ -47,10 +47,10 @@ def part2():
 
     for bit in range(len(nums_oxy[0])):
 
-        bits_oxy = [l[bit] for l in nums_oxy]   # bits_oxy = count the number of '1's and '2's
+        bits_oxy = [l[bit] for l in nums_oxy]   # bits_oxy = count the number of '1's and '0's
 
         if bits_oxy.count('1') >= bits_oxy.count('0'):
-            nums_oxy = [l for l in nums_oxy if l[bit] == '1']
+            nums_oxy = [l for l in nums_oxy if l[bit] == '1']   # l = a line of nums_oxy. If l[current index] == '1'
         else:
             nums_oxy = [l for l in nums_oxy if l[bit] == '0']
         print(nums_oxy)
@@ -58,7 +58,7 @@ def part2():
 
     for bit in range(len(nums_car[0])):
 
-        bits_car = [l[bit] for l in nums_car]   # bits_car = count the number of '1's and '2's
+        bits_car = [l[bit] for l in nums_car]   # bits_car = count the number of '1's and '0's
 
         if bits_car.count('1') >= bits_car.count('0'):
             nums_car = [l for l in nums_car if l[bit] == '0']
