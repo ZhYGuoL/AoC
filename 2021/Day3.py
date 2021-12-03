@@ -1,7 +1,3 @@
-inputFile = open('Day2Input', 'r')
-raw = inputFile.readlines()
-processed = []
-
 def part1():
     bits = [n.strip() for n in open("Day3Input")]
     gammaStr = ""
@@ -65,6 +61,5 @@ def part2():
         else:
             nums_car = [l for l in nums_car if l[bit] == '1']
 
-
-    print("part 2 : ", int(nums_oxy[0], 2) * int(nums_car[0], 2))   # binary(base 2) to int(base 10)
+    print(int(nums_oxy[0], 2) * int(nums_car[0], 2))   # binary(base 2) to int(base 10)
 part2()
