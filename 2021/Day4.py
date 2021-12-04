@@ -1,12 +1,3 @@
-# a = (open("Day4Input").read().splitlines()[0].split(","))
-
-# print(a)
-# print(len(a))
-
-# for i in range(len(a),0,-5):
-#     print(i)
-
-
 numbers = None
 AllBoards = []
 F = []
@@ -15,11 +6,10 @@ raw = (open("Day4Input").readlines())
 
 nums = raw[0].strip().split(",")
 
-# print(nums)
 for line in open("Day4Input"):
     
     line = line.strip()
-    print(line)
+    
     if numbers is None:
         numbers = [int(x) for x in line.split(',')]
         print(line)
@@ -31,16 +21,13 @@ for line in open("Day4Input"):
                 AllBoards.append(board)
             board = []
 AllBoards.append(board)
-print(board)
-print("\n")
-print(AllBoards)
-print("\n")
+
 
 for IndBoard in AllBoards:
     F.append([[False for x in range(5)] for x in range(5)])
 
 WON = [False for x in range(len(AllBoards))]
-print(WON)
+
 for num in numbers:
     for i in range(len(AllBoards)):
         for r in range(5):
