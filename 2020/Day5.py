@@ -38,9 +38,8 @@ for seat in seats:
     biggestID = max(biggestID, ID)
     IDs.append(ID)
 
-print(biggestID)
 IDs = sorted(IDs)
-print(IDs)
+
 for i in range(1, len(IDs)):
     if IDs[i-1] + 1 != IDs[i]:
         print(IDs[i-1]+1)
